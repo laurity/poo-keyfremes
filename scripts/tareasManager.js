@@ -69,6 +69,6 @@ export class TareasManager{
 
         setArregloTareas(){
             localStorage.setItem("arregloTareas", JSON.stringify(this.arregloTareas));
-            this.listaTareas();
+            this.listarTareas();
         }
     }
