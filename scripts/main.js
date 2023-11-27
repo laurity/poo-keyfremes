@@ -24,3 +24,10 @@ lista_tareas.addEventListener('click', (event) =>{
         tareaManager.eliminarTarea(target.parentElement.id);
     }
 });
+
+lista_tareas.addEventListener('keypress', (event) =>{
+    const target = event.target;
+    if(event.keyCode === 13){
+        tareaManager.editarTarea(target.parentElement.id, target.value);
+    }
+});

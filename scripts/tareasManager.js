@@ -16,20 +16,21 @@ export class TareasManager{
     }
 
     listarTareas(){
-        this.listarTareas.innerHTML = '';
-        this.arregloTareas.reverse().foreach((tarea) =>{
+        this.listaTareas.innerHTML = '';
+        this.arregloTareas.reverse().forEach((tarea) =>{
             this.listaTareas.innerHTML += `
             <li id="${tarea.id}">
             <input type="text" class="input-tarea" value="${tarea.descripcion}">
             <button class="boton-eliminar">X</button>
             </li>
+            
             `
         })
     }
         editarTarea(idTarea, descripcion){
-            const tarea = this.arregloTareas.find((t) => t.id == idTarea);
+            const tarea = this.arregloTareas.find((t) => t.id === idTarea);
             if (tarea){
-                tarea.editarTarea(descripcion);
+                tarea.editar(descripcion);
                 this.setArregloTareas();
             }
         }
@@ -40,7 +41,7 @@ export class TareasManager{
         }
 
         limpiarTodo(){
-            this.arreglosTareas = [];
+            this.arregloTareas = [];
             this.contador = 0;
             this.setArregloTareas(); 
             this.setContador();
@@ -63,7 +64,7 @@ export class TareasManager{
 
         getArregloTareas(){
             this.setContador();
-            const arreglo = JSON.parse (localStorage.getItem("arregloTareas"));
+            const arreglo = JSON.parse(localStorage.getItem("arregloTareas"));
             return arreglo || [];
         }
 
