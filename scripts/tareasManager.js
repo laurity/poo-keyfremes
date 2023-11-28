@@ -28,7 +28,7 @@ export class TareasManager{
         })
     }
         editarTarea(idTarea, descripcion){
-            const tarea = this.arregloTareas.find((t) => t.id === idTarea);
+            const tarea = this.arregloTareas.find((t) => t.id == idTarea);
             if (tarea){
                 tarea.editar(descripcion);
                 this.setArregloTareas();
