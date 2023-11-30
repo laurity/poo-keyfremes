@@ -105,7 +105,22 @@ input{
 
 .container{
     font-family: 'Fuente', sans-serif;
+    background: pink;
+    background: radial-gradient(circle,rgb(228, 104, 253) 0%, rgb(233, 204, 204)100%);
+    max-width: 400px;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.75);
 
+}
+
+.header{
+    border-bottom: 1px solid black;
+}
+
+.titulo{
+    text-align: center;
 }
 body{
     /*Ruta de la imagen*/
@@ -116,4 +131,7 @@ body{
     background-repeat: no-repeat;
     /*Hace que la imagen de fondo sea fija*/
     background-attachment: fixed;
+}
+button{
+    font-family: 'Fuente', sans-serif;
 }
