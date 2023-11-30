@@ -135,3 +135,21 @@ body{
 button{
     font-family: 'Fuente', sans-serif;
 }
+
+.boton-agregar{
+    display: block;
+    margin: auto;
+    margin-top: -15px;
+    padding: 4px 10px;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+.boton-agregar:hover{
+    background-color: greenyellow;
+}
+
+.lista-tareas{
+    list-style: none;
+    padding: 0;
+}
