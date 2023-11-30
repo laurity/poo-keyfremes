@@ -17,6 +17,9 @@ export class TareasManager{
 
     listarTareas(){
         this.listaTareas.innerHTML = '';
+        if(localStorage.getItem("arregloTareas") !== null){
+            this.arregloTareas = this.getArregloTareas(); 
+        } 
         this.arregloTareas.reverse().forEach((tarea) =>{
             this.listaTareas.innerHTML += `
             <li id="${tarea.id}">
@@ -65,7 +68,10 @@ export class TareasManager{
         getArregloTareas(){
             this.setContador();
             const arreglo = JSON.parse(localStorage.getItem("arregloTareas"));
-            return arreglo || [];
+
+            //Convertir objetos genéricos en instancias de la clase Tarea.
+            const tareasConvertidas = arreglo.map((tarea) => new Tarea(tarea.id, tarea.descripcion));
+            return tareasConvertidas;
         }
 
         setArregloTareas(){

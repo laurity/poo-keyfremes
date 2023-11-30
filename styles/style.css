@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+/*@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
 
 body  {
     background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
@@ -95,4 +95,25 @@ input{
     background-color: transparent !important;
     font-weight: 900;
     border-radius: 5px;
+}
+*/
+
+@font-face {
+    font-family: 'Fuente';
+    src: url('../assets/fonts/HedvigLettersSans-Regular.ttf');
+}
+
+.container{
+    font-family: 'Fuente', sans-serif;
+
+}
+body{
+    /*Ruta de la imagen*/
+    background-image: url('../assets/imgs/fondo.jpg');
+    /*Cubre todo el area del body*/
+    background-size: cover;
+    /*Evita que la imagen se repita*/
+    background-repeat: no-repeat;
+    /*Hace que la imagen de fondo sea fija*/
+    background-attachment: fixed;
 }
